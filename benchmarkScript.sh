@@ -6,7 +6,7 @@
 ### and is run as "ubuntu" user which requires full sudo privileges.
 ###
 ### The script is run as "./script.sh argument1 argument2 argument3"
-### Example: "./script.sh t2.micro 10.0.0.106 xvd"
+### Example: "./benchmarkScript.sh 1p2g 10.0.0.106 sd"
 ### NOTE: For nvme0n1 use "nvme" as argument 3
 ###
 ### Where Argument 1 is the VM type, and also the name of the output csv file with the results
@@ -23,7 +23,7 @@ if [ $# -ne 3 ]; then
   echo "First argument is the name of the output file for the results, for example the instace type"
   echo "Second arugment is the ncmeter receiver IP address, where ncmeter is running for the LAN test"
   echo "Third argument is the block device naming being used ("xvd" or "sd")"
-  echo "Example: ./script.sh t2.large 10.0.0.106"
+  echo "Example: ./benchmarkScript.sh 1p2g 10.0.0.106 sd"
   exit 1
 fi
 
